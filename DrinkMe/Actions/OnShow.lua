@@ -17,7 +17,7 @@ end
 local target_mana_percentage = 0.8;
 
 -- say something
-SendChatMessage("Time to have a rrrrrBite!", "SAY");
+SendChatMessage("is starting to wolf down something that looks like food with a growl.", "EMOTE");
 
 local current_mana_percentage = get_mana_percentage();
 SendChatMessage("Mana " .. string.format("%.0f", current_mana_percentage * 100) .. "%", "PARTY");
