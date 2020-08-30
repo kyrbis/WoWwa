@@ -17,10 +17,10 @@ end
 local target_mana_percentage = 0.8;
 
 -- say something
-SendChatMessage("is starting to wolf down something that looks like food with a growl.", "EMOTE");
+SendChatMessage("is wolfing down some water.", "EMOTE");
 
 local current_mana_percentage = get_mana_percentage();
-SendChatMessage("Mana " .. string.format("%.0f", current_mana_percentage * 100) .. "%", "PARTY");
+SendChatMessage("Mana " .. string.format("%.0f", current_mana_percentage * 100) .. "%", "YELL");
 if (target_mana_percentage > current_mana_percentage) then
-	SendChatMessage(string.format("%.2f", get_time_to_mana_percent(target_mana_percentage)) .. "s to " .. string.format("%.0f", target_percentage * 100) .. "%", "PARTY");
+	SendChatMessage("Mana " .. string.format("%.0f", target_mana_percentage * 100) .. " in " .. string.format("%.2f", get_time_to_mana_percent(target_mana_percentage)) .. "s", "YELL");
 end
